@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "398779864022",
+    "firebase_url": "https://fireofmusic-1e593.firebaseio.com",
+    "project_id": "fireofmusic-1e593",
+    "storage_bucket": "fireofmusic-1e593.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398779864022:android:ec87b391857433c44d4a77",
+        "android_client_info": {
+          "package_name": "com.fireofmusic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398779864022-8trddd1ndtgobtvgq2vvimbkgp87nglf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fireofmusic",
+            "certificate_hash": "426ecf3998727f25ee74b210e35df0f29747ea0a"
+          }
+        },
+        {
+          "client_id": "398779864022-iotehk33247e35rbgebt6lr6p8rnf002.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBngj_gKTLsTbqAUfceblMgnjbgo5XHgvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398779864022-iotehk33247e35rbgebt6lr6p8rnf002.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
