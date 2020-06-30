@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "398779864022-p4lp9tlonr105ebrmb7s3pfgfbhcb3qk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fireofmusic",
+            "certificate_hash": "cdb3360e20d729d54311fd9b442d95392a4a1716"
+          }
+        },
+        {
           "client_id": "398779864022-8trddd1ndtgobtvgq2vvimbkgp87nglf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

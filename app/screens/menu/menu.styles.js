@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import { COLOR_YELLOW, COLOR_ORANGE } from '../../styles/common';
+import { COLOR_YELLOW, COLOR_ORANGE, COLOR_PRIMARY } from '../../styles/common';
 
 export default StyleSheet.create({
     menu: {
@@ -8,11 +8,16 @@ export default StyleSheet.create({
     },
     content: {
         display: "flex",
+        width: '100%',
         flexDirection: "column"
     },
     touchable: {
-        backgroundColor: COLOR_ORANGE,
+        alignSelf: 'center',
+        backgroundColor: COLOR_PRIMARY,
         width: '90%',
-        height: 150
+        marginVertical: 5,
+        height: 150,
+        borderRadius: 10,
+        borderWidth: 2
     }
 });

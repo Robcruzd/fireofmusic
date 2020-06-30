@@ -1,17 +1,9 @@
 const defaultState = {
     isLoggedIn: false,
-    username: '',
+    email: '',
     name: '',
     photo: null,
-    token: '',
-    refreshToken: '',
-    expires_in: null,
-    identification: '',
-    typeIdentification: '',
-    matchSdqs: '',
-    latitude: null,
-    longitude: null,
-    address: ''
+    token: ''
 }
 
 export default function reducer(state = defaultState, action) {
@@ -19,50 +11,26 @@ export default function reducer(state = defaultState, action) {
         case 'LOGIN':
             return Object.assign({}, state, {
                 isLoggedIn: true,
-                username: action.data.username,
+                email: action.data.email,
                 name: action.data.name,
                 photo: action.data.photo,
-                token: action.data.token,
-                refreshToken: action.data.refreshToken,
-                expires_in: action.data.expires_in,
-                identification: action.data.identification,
-                typeIdentification: action.data.identification,
-                matchSdqs: action.data.matchSdqs,
-                latitude: action.data.latitude,
-                longitude: action.data.longitude,
-                address: action.data.address
+                token: action.data.token
             });
         case 'LOGOUT':
             return Object.assign({}, state, {
                 isLoggedIn: false,
-                username: '',
+                email: '',
                 name: '',
                 photo: '',
-                token: '',
-                refreshToken: '',
-                expires_in: null,
-                identification: '',
-                typeIdentification: '',
-                matchSdqs: '',
-                latitude: null,
-                longitude: null,
-                address: ''
+                token: ''
             });
         case 'INIT':
             return Object.assign({}, state, {
                 isLoggedIn: true,
-                username: action.data.username,
+                email: action.data.email,
                 name: action.data.name,
                 photo: action.data.photo,
-                token: action.data.token,
-                refreshToken: action.data.refreshToken,
-                expires_in: action.data.expires_in,
-                identification: action.data.identification,
-                typeIdentification: action.data.identification,
-                matchSdqs: action.data.matchSdqs,
-                latitude: action.data.latitude,
-                longitude: action.data.longitude,
-                address: action.data.address
+                token: action.data.token
             });
 
         default:

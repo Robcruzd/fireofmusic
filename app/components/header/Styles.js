@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { COLOR_SECONDARY } from '../../styles/common';
+import { COLOR_SECONDARY, COLOR_WHITE } from '../../styles/common';
 export default StyleSheet.create({
   mainHeader: {
     flex:0,
@@ -13,5 +13,7 @@ export default StyleSheet.create({
   },
   header: {
     backgroundColor: COLOR_SECONDARY
-  }
+  },
+  titleText: {color:COLOR_WHITE, fontSize: 12, textAlign:'right'},
+  button: {backgroundColor:COLOR_SECONDARY, elevation: 0, alignSelf: 'flex-end'}
 });

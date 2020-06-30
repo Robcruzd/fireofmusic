@@ -1,10 +1,11 @@
 import React from 'react';
 import {Icon, ListItem, View, Text} from 'native-base';
 import styles from './Styles';
-import {CustomIcon, CustomText} from 'supercade/app/components/Index';
-import {COLOR_GREEN, COLOR_GRAY, COLOR_RED} from 'supercade/app/styles/common';
+import {CustomIcon} from 'fireofmusic/app/components/Index';
+import {COLOR_GRAY} from 'fireofmusic/app/styles/common';
+import { Image } from 'react-native';
 
-class ScadevListItem extends React.Component {
+class CustomListItem extends React.Component {
 
     constructor(props) {
         super(props)
@@ -15,17 +16,19 @@ class ScadevListItem extends React.Component {
             <ListItem onPress={this.props.onPress}
                       style={[styles.listItem, this.props.style]}>
                 <View style={styles.iconTextContainer}>
-                    {this.props.uriImage?
-                        <Image style={this.props.styleIcon} source={{uri: this.props.uriImage}}/>:
-                        <CustomIcon name={this.props.icon} style={this.props.styleIcon}/>
+                    {this.props.uriImage ?
+                        <Image style={[styles.image, this.props.styleIcon]} source={{
+                            uri: this.props.uriImage,
+                          }}></Image>:
+                        <CustomIcon name={this.props.icon} style={this.props.styleIcon}></CustomIcon>
                     }
-                    <View style={{flexDirection: "column", flex: 1, marginLeft: 8}}>
-                        <View style={{flex:0, flexDirection:'row', alignContent:'center'}}>
+                    <View style={styles.viewtext}>
+                        <View style={styles.viewtitle}>
                             <Text style={[styles.textStyle, this.props.textStyle]}>{this.props.text}</Text>
                         </View>
                         {this.props.children ?
                             <Text
-                                style={[styles.textBody, this.props.textBodyStyle]}>{this.props.children}</Text>:null}
+                                style={[styles.textBody, this.props.textBodyStyle]}>Listeners: {this.props.children}</Text>:null}
                     </View>
                 </View>
                 {this.props.arrow &&
@@ -36,4 +39,4 @@ class ScadevListItem extends React.Component {
     }
 }
 
-export default ScadevListItem;
+export default CustomListItem;

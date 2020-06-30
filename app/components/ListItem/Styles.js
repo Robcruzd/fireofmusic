@@ -7,6 +7,10 @@ export default StyleSheet.create({
         paddingTop: 10, 
         paddingBottom: 10, 
         paddingLeft: 0},
+    image: {
+        width: 50,
+        height: 50
+    },
     iconTextContainer: {
         flex: 1,
         flexDirection: 'row',
@@ -23,5 +27,7 @@ export default StyleSheet.create({
     textBody: {
         fontSize: 13,
         textAlign: 'left'
-    }
+    },
+    viewtext: {flexDirection: "column", flex: 1, marginLeft: 8},
+    viewtitle: {flex:0, flexDirection:'row', alignContent:'center'}
 });

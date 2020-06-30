@@ -9,12 +9,11 @@ import {COLOR_SECONDARY, COLOR_WHITE, COLOR_GRAY} from './app/styles/common';
 import firebase from 'react-native-firebase';
 import Login from './app/screens/login/login.component';
 import Menu from './app/screens/menu/menu.component';
+import TopTracks from './app/screens/topTracks/topTracks.component';
+import TopArtists from './app/screens/topArtists/topArtists.component';
 
 const store = configureStore();
 const RouterWithRedux = connect()(Router);
-//const IconSuper = createIconSetFromFontello(fontelloConfig);
-
-// let Analytics = firebase.analytics();
 
 class App extends Component {
     constructor(props){
@@ -23,7 +22,6 @@ class App extends Component {
             flag1: false,
             flag2: false
         }
-        // Analytics.setCurrentScreen('Index', 'index');
     }
 
     componentDidMount() {
@@ -38,7 +36,6 @@ class App extends Component {
             }
             else {
                 this.setState({flag2:true});
-                SplashScreen.hide();
             }
         });
     }
@@ -65,6 +62,8 @@ class App extends Component {
                         <Scene key="root" navigationBarStyle={styles.navigationBarStyle}>
                             <Scene key="login" component={Login} title='login' hideNavBar={true}/>
                             <Scene key="menu" component={Menu} title='menu' hideNavBar={true}/>
+                            <Scene key="topTracks" component={TopTracks} title='topTracks' hideNavBar={true}/>
+                            <Scene key="topArtists" component={TopArtists} title='topArtists' hideNavBar={true}/>
                         </Scene>
                     </RouterWithRedux>
                 </Provider>
@@ -78,6 +77,8 @@ class App extends Component {
                         <Scene key="root" navigationBarStyle={styles.navigationBarStyle}>
                             <Scene key="menu" component={Menu} title='menu' hideNavBar={true}/>
                             <Scene key="login" component={Login} title='login' hideNavBar={true}/>
+                            <Scene key="topTracks" component={TopTracks} title='topTracks' hideNavBar={true}/>
+                            <Scene key="topArtists" component={TopArtists} title='topArtists' hideNavBar={true}/>
                         </Scene>
                     </RouterWithRedux>
                 </Provider>
@@ -92,20 +93,7 @@ class App extends Component {
 export default App;
 
 const styles = StyleSheet.create({
-    tabBar: {
-        borderTopColor: COLOR_GRAY,
-        borderTopWidth: 2.5 / PixelRatio.get(),
-        backgroundColor: COLOR_GRAY,
-        height: 60
-    },
     navigationBarStyle: {
         backgroundColor: COLOR_SECONDARY,
-    },
-    statusBar: {
-        backgroundColor: COLOR_SECONDARY,
-    },
-    safeArea: {
-        flex: 1,
-        backgroundColor: '#ddd'
-      }
+    }
 });

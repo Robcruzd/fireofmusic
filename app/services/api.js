@@ -1,13 +1,11 @@
 import RNFetchBlob from 'rn-fetch-blob';
 import { MESSAGE_OFF_LINE, TOP_ARTISTS, TOP_TRACKS } from '../config/constants';
 
-
-//SERVICIOS Api RESR wordpress
 var api = {
-    getTopArtists() {
+    getTopArtists(page) {
         return RNFetchBlob.config({
             trusty: true
-        }).fetch("GET", TOP_ARTISTS)
+        }).fetch("GET", TOP_ARTISTS+'&page='+page)
             .then((res) => {
                 console.log('topartists: ',res);
                 if (res.respInfo.status === 200 || res.respInfo.status === 404) {
@@ -33,11 +31,11 @@ var api = {
             });
     },
 
-    getTopTracks() {
+    getTopTracks(page) {
         var response;
         return RNFetchBlob.config({
             trusty: true
-        }).fetch("GET", TOP_TRACKS)
+        }).fetch("GET", TOP_TRACKS+'&page='+page)
             .then((res) => {
                 console.log('toptracks: ',res);
                 if (res.respInfo.status === 200 || res.respInfo.status === 404) {
